@@ -17,6 +17,7 @@ class Tab:
   def add(self, item):
     self.items.append(item)
     self.total += self.menu[item]
+    print(f'{item} added, price is {self.menu[item]}')
 
   def print_bill(self, tax, service):
     tax = (tax/100 * self.total)
@@ -27,3 +28,8 @@ class Tab:
       print(f'{item:20} ${self.menu[item]}')
 
     print(f'{"Total":20} ${total:.2f} ')
+
+    # using this class in the python intepretor 
+    # type: from bar_tab import Tab
+    # type: table1 = Tab() 
+    # now you can use the methods on table1 ....  table1.add() and table1.print_bill()
